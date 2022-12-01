@@ -50,6 +50,8 @@ Baltimore %>%
   geom_bar(aes(x= date, weight = homicide, fill= season))+
   geom_smooth(aes(x= date, y = homicide), color= 'blue', se=FALSE, size =1, span =0.1) +
   scale_fill_manual(values = c('Summer'= 'azure3', 'Winter' = 'lightblue')) +
-  geom_vline (xintercept = as.numeric(as.Date('2015-04-30')), linetype= 'longdash', col= 'red')
+  geom_vline (xintercept = as.numeric(as.Date('2015-04-30')), linetype= 'longdash', col= 'red')  + 
+  annotate("text", x= as.Date('2015-04-30'), y = 45, 
+           label = "Arrest of \n Freddie Grey", color ='azure3', hjust = 1, size = 4)
 ```
 
