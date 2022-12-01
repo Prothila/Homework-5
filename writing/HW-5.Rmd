@@ -2,7 +2,7 @@
 title: "Hw_5"
 author: "Prothila"
 date: "11/30/2022"
-output: html_document
+output: word_document
 ---
 
 ```{r setup, include=FALSE}
