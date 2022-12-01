@@ -34,5 +34,6 @@ head(Baltimore)
 ```
 ```{r}
 Baltimore$month <- format (as.Date(Baltimore$date, format = "%y/%m/%d"), "%m")
+Baltimore$month <- as.numeric(Baltimore$month)
 ```
 
