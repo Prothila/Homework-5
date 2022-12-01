@@ -9,6 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ```{r}
-
+library(readr)
+library(tidyverse)
+library(knitr)
+homicide <- read.csv('../data/homicide-data.csv') %>% 
+  mutate(city_name = paste(city,state, sep = ",")) 
+head(homicide)
 ```
 
