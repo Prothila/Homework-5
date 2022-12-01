@@ -56,6 +56,7 @@ Baltimore %>%
   ggtitle("Homicides in Baltimore, MD") +
   xlab('Date') +
   ylab('Monthly homicides') +
-  theme_dark()
+  theme_dark() +
+  theme(legend.position = 'bottom') 
 ```
 
