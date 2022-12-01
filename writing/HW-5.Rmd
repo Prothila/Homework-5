@@ -55,6 +55,7 @@ Baltimore %>%
            label = "Arrest of \n Freddie Grey", color ='azure3', hjust = 1, size = 4) +
   ggtitle("Homicides in Baltimore, MD") +
   xlab('Date') +
-  ylab('Monthly homicides')
+  ylab('Monthly homicides') +
+  theme_dark()
 ```
 
