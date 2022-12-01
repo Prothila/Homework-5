@@ -35,5 +35,9 @@ head(Baltimore)
 ```{r}
 Baltimore$month <- format (as.Date(Baltimore$date, format = "%y/%m/%d"), "%m")
 Baltimore$month <- as.numeric(Baltimore$month)
+Baltimore <- Baltimore %>% 
+  mutate(season = case_when(month >=5 & month <=10 ~'Summer',
+                            month <5 ~ 'Winter',
+                            month >10 ~'Winter'))
 ```
 
