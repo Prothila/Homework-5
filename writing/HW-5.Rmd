@@ -48,6 +48,8 @@ library(ggthemes)
 Baltimore %>% 
   ggplot()+
   geom_bar(aes(x= date, weight = homicide, fill= season))+
-  geom_smooth(aes(x= date, y = homicide), color= 'blue', se=FALSE, size =1, span =0.1) +   scale_fill_manual(values = c('Summer'= 'azure3', 'Winter' = 'lightblue'))
+  geom_smooth(aes(x= date, y = homicide), color= 'blue', se=FALSE, size =1, span =0.1) +
+  scale_fill_manual(values = c('Summer'= 'azure3', 'Winter' = 'lightblue')) +
+  geom_vline (xintercept = as.numeric(as.Date('2015-04-30')), linetype= 'longdash', col= 'red')
 ```
 
