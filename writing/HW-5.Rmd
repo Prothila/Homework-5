@@ -39,5 +39,6 @@ Baltimore <- Baltimore %>%
   mutate(season = case_when(month >=5 & month <=10 ~'Summer',
                             month <5 ~ 'Winter',
                             month >10 ~'Winter'))
+head(Baltimore)
 ```
 
