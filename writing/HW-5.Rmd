@@ -20,7 +20,7 @@ head(homicide)
 ```{r}
 Arrest_of_Grey<- homicide %>% 
   filter(victim_last == "GREY", city =="Baltimore")
-View(Arrest_of_Grey)
+
 ```
 
 ```{r}
@@ -30,5 +30,6 @@ Baltimore <- homicide %>%
   filter(city_name == 'Baltimore,MD') %>% 
   group_by(date = floor_date(reported_date, 'month')) %>% 
   summarize(homicide = n())
+head(Baltimore)
 ```
 
