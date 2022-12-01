@@ -47,6 +47,7 @@ library(ggplot2)
 library(ggthemes)
 Baltimore %>% 
   ggplot()+
-  geom_bar(aes(x= date, weight = homicide, fill= season))
+  geom_bar(aes(x= date, weight = homicide, fill= season))+
+  geom_smooth(aes(x= date, y = homicide), color= 'blue', se=FALSE, size =1, span =0.1)
 ```
 
