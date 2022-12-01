@@ -32,4 +32,7 @@ Baltimore <- homicide %>%
   summarize(homicide = n())
 head(Baltimore)
 ```
+```{r}
+Baltimore$month <- format (as.Date(Baltimore$date, format = "%y/%m/%d"), "%m")
+```
 
