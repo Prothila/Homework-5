@@ -45,5 +45,8 @@ head(Baltimore)
 ```{r}
 library(ggplot2)
 library(ggthemes)
+Baltimore %>% 
+  ggplot()+
+  geom_bar(aes(x= date, weight = homicide, fill= season))
 ```
 
