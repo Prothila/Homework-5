@@ -17,3 +17,18 @@ homicide <- read.csv('../data/homicide-data.csv') %>%
 head(homicide)
 ```
 
+```{r}
+Arrest_of_Grey<- homicide %>% 
+  filter(victim_last == "GREY", city =="Baltimore")
+View(Arrest_of_Grey)
+```
+
+```{r}
+library(lubridate)
+Baltimore <- homicide %>% 
+  mutate(reported_date = ymd(reported_date)) %>% 
+  filter(city_name == 'Baltimore,MD') %>% 
+  group_by(date = floor_date(reported_date, 'month')) %>% 
+  summarize(homicide = n())
+```
+
